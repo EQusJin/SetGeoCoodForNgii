@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <Title>지리원 정사영상 좌표입력 프로그램</Title>
+    <Authors>EQusJin</Authors>
+    <Company>EQusJin</Company>
+    <Product>지리원 정사영상 좌표입력 프로그램</Product>
+    <Description>지리원 정사영상 좌표입력 프로그램</Description>
+    <Copyright>Copyright 2023. EQusJin. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EGIS.Projections" Version="4.8.6" />
+    <PackageReference Include="EGIS.ShapeFileLib" Version="4.8.6" />
+    <PackageReference Include="GDAL" Version="3.6.3" />
+    <PackageReference Include="GDAL.Native" Version="3.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="MAPINDX_5K\MAPINDX_5K_BUF_J_5186.dbf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="MAPINDX_5K\MAPINDX_5K_BUF_J_5186.prj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="MAPINDX_5K\MAPINDX_5K_BUF_J_5186.shp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="MAPINDX_5K\MAPINDX_5K_BUF_J_5186.shx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
